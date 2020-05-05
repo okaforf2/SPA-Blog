@@ -4,6 +4,7 @@ const Koa = require('koa')
 const Router = require('koa-router')
 // import koa-body parser which is used to extract parameters from request
 const bodyParser = require('koa-bodyparser')
+const cors = require('@koa/cors')
 
 const app = new Koa()
 const router = new Router
@@ -27,6 +28,7 @@ const pinneds = require ('./routes/pinneds')
 // router.get('/api/v1.0', welcomeAPI)
 
 //use the root routes
+app.use(cors())
 app.use(welcome.routes())
 app.use(articles.routes())
 app.use(admin.routes())

@@ -32,12 +32,12 @@ router.post('/', bodyParser(), async (cnx, next) => {
         // console.log(cnx.request.body)
 
     let newUser = {
-                      first_name:cnx.request.body.first_name === undefined ? undefined: cnx.request.body.first_name, 
-                      user_name:cnx.request.body.user_name === undefined ? undefined: cnx.request.body.user_name,
-                      about:cnx.request.body.about === undefined ? undefined: cnx.request.body.about,
-                      email:cnx.request.body.email === undefined ? undefined: cnx.request.body.email,
-                      password:cnx.request.body.password === undefined ? undefined: cnx.request.body.password,
-                      avatar_url:cnx.request.body.avatar_url === undefined ? undefined: cnx.request.body.avatar_url
+                      first_name:cnx.request.body.values === undefined ? undefined: cnx.request.body.values.first_name, 
+                      user_name:cnx.request.body.values === undefined ? undefined: cnx.request.body.values.user_name,
+                      about:cnx.request.body.values === undefined ? undefined: cnx.request.body.values.about,
+                      email:cnx.request.body.values === undefined ? undefined: cnx.request.body.values.email,
+                      password:cnx.request.body.values === undefined ? undefined: cnx.request.body.values.password,
+                      avatar_url:cnx.request.body.values === undefined ? undefined: cnx.request.body.values.avatar_url
                     }
 try{
     // let data = await model.add(newUser)

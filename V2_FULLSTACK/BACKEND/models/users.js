@@ -46,9 +46,9 @@ exports.add = async (users) => {
             throw {message:"user name is required", status:400}
         }
 
-        if(users.about === undefined){
-            throw {message:"text is required", status:400}
-        }
+        // if(users.about === undefined){
+        //     throw {message:"text is required", status:400}
+        // }
 
         if(users.password === undefined){
             throw {message:"password is required", status:400}
@@ -58,9 +58,9 @@ exports.add = async (users) => {
             }
         }
 
-        if(users.email === undefined){
-            throw {message:"email is required", status:400}
-        }
+        // if(users.email === undefined){
+        //     throw {message:"email is required", status:400}
+        // }
     
 
 // email should be a valid email address
@@ -80,7 +80,7 @@ var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9
             //first close the connection as we are leaving this function
             await connection.end();
             //then throw an error to leave the function
-            throw {message:'email address already in use', status:400};
+            // throw {message:'email address already in use', status:400};
         }
 
         //hash the password using bcryptjs package

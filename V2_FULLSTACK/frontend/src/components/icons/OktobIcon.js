@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { LikeOutlined } from '@ant-design/icons'
+// import { LikeOutlined } from '@ant-design/icons'
 // import Icon from '@ant-design/icons'
 
 
@@ -38,7 +38,7 @@ import { LikeOutlined } from '@ant-design/icons'
  //and a space then the counter
  //if the icon is clicked we will run onClick handler
 
- return <div> <span><LikeOutlined type={this.props.type} onClick={this.onClick} theme={ theme } style={{color:'steelblue'}}/> {this.props.count}
+ return <div> <span><OktobIcon type={this.props.type} onClick={this.onClick} theme={ theme } style={{color:'steelblue'}}/> {this.props.count}
  </span>
  </div>
  }

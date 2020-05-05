@@ -26,21 +26,21 @@ class OktobCard extends Component {
         cover={
             <img
             alt={this.props.imgAlt}
-            src={this.props.imgURL}
+            src={this.props.image_url}
             onClick={this.handleClick}
             />
         }
 
     actions={[
-        <OktobIcon type="like" count={this.props.likes} selected={this.props.liked} />,
-        <OktobIcon2 type="message" count={this.props.comments}/>,
-        <OktobIcon3 type="pushpin" selected={this.props.pinned} />,
+        // <OktobIcon type="like" count={this.props.likes} selected={this.props.liked} />,
+        // <OktobIcon2 type="message" count={this.props.comments}/>,
+        // <OktobIcon3 type="pushpin" selected={this.props.pinned} />,
 
     ]}
     >
         <Meta
             title={this.props.title}
-            description={this.props.description}
+            description={this.props.all_text}
             />
         </Card>
 }
